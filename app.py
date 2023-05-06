@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 
 # Load the trained model
-model = joblib.load('model.joblib')
+model = joblib.load(open('model.joblib', 'rb'))
 
 app = Flask(__name__)
 
